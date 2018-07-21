@@ -7,6 +7,10 @@ public class TableData {
     public String location;
     public Double size;
     
+    public TableData() {
+    
+    }
+    
     public TableData(int number, String name, String location, Double size) {
         this.number = number;
         this.name = name;
