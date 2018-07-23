@@ -38,6 +38,11 @@ public class mTableModel extends AbstractTableModel {
         return listHeader.get(columnIndex);
     }
     
+    @Override
+    public void fireTableRowsInserted(int firstRow, int lastRow) {
+        super.fireTableRowsInserted(firstRow, lastRow);
+    }
+    
     public Object getValueAt(int rowIndex, int columnIndex) {
     
         FileToTable fileToTable = allFiles.get(rowIndex);

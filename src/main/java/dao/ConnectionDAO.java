@@ -95,14 +95,14 @@ public class ConnectionDAO {
         return listAllFiles;
     }
     
-    public boolean deleteFilefromTable(FileToTable fileToTable) throws SQLException {
+    public boolean deleteFilefromTable(int id) throws SQLException {
         
         String sql = "DELETE FROM DEMO.FILE_LIST WHERE id = ?";
         
         connect();
         
         PreparedStatement stmt = jdbcConn.prepareStatement(sql);
-        stmt.setInt(1, fileToTable.getId());
+        stmt.setInt(1, id);
         
         boolean rowDeleted = stmt.executeUpdate() > 0;
         stmt.close();
